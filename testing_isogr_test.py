@@ -17,7 +17,7 @@ batch_size = 8
 
 num_classes = 249
 dataset_name = 'isogr'
-model_prefix='/raid/gmzhu/tensorflow/gestureness3/fpooling_avg_ft/'
+model_prefix='./'
 
 curtime = '%s' % datetime.now()
 d = curtime.split(' ')[0]
