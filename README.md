@@ -16,6 +16,7 @@ The pretrained models used in training processes can be obtained on the link: ht
 1) Convert each video files into images
 2) Compute the optical flow and save each optical flow frame as one image which is named as "%06d.jpg"
 3) If images(RGB, Depth, OpticalFlow) have been prepared and the names are not like "%06d.jpg", you can change the inputs.py.
+4) Assign the 'model_prefix' as the path in which you want to store the models in 'training_isogr_*.py'/'testing_isogr_*.py'/'svmtrte_isogr_*.py'.
 
 ### Training Stage
 1) Use training_*.py to finetune the networks for different modalities. Please replace the paths in the codes with your paths first. <br/>

@@ -35514,7 +35514,6 @@
 /ssd/dataset/IsoGD_Image/train_image/RGB/M_35514/ 43 246
 /ssd/dataset/IsoGD_Image/train_image/RGB/M_35515/ 49 158
 /ssd/dataset/IsoGD_Image/train_image/RGB/M_35516/ 61 180
-/ssd/dataset/IsoGD_Image/train_image/RGB/M_35517/ 1 177
 /ssd/dataset/IsoGD_Image/train_image/RGB/M_35518/ 35 241
 /ssd/dataset/IsoGD_Image/train_image/RGB/M_35519/ 38 131
 /ssd/dataset/IsoGD_Image/train_image/RGB/M_35520/ 19 168

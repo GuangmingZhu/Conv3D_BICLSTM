@@ -1,5 +1,5 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import io
 import sys
 import numpy as np
@@ -150,8 +150,6 @@ for X_indices, y_label_t in tl.iterate.minibatches(X_teidx,
 
 fusion_prediction = rgb_prediction + depth_prediction + flow_prediction
 prediction_values = tf.argmax(fusion_prediction, 1)
-final_accuracy = tf.reduce_mean(tf.cast(tf.equal(tf.cast(prediction_values, tf.int32), y_test), tf.float32))
-print final_accuracy.eval()
 
 video_list = './dataset_splits/test_list.txt'
 f = open(video_list, 'r')

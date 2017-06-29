@@ -35514,7 +35514,6 @@
 /ssd/dataset/IsoGD_Image/train_image/Depth/K_35514/ 43 246
 /ssd/dataset/IsoGD_Image/train_image/Depth/K_35515/ 49 158
 /ssd/dataset/IsoGD_Image/train_image/Depth/K_35516/ 61 180
-/ssd/dataset/IsoGD_Image/train_image/Depth/K_35517/ 1 177
 /ssd/dataset/IsoGD_Image/train_image/Depth/K_35518/ 35 241
 /ssd/dataset/IsoGD_Image/train_image/Depth/K_35519/ 38 131
 /ssd/dataset/IsoGD_Image/train_image/Depth/K_35520/ 19 168

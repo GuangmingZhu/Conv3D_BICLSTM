@@ -284,9 +284,8 @@ np.save("testing_label.npy", testing_label)
 sess.close()
 
 clf = svm.SVC(decision_function_shape='ovr')
-clf.fit(training_feats, training_label)
+clf.fit(training_feats, training_label.ravel())
 predict = clf.decision_function(testing_feats).argmax(1)
-accuracy = (predict == testing_label).sum() / len(testing_label)
 
 video_list = './dataset_splits/test_list.txt'
 f = open(video_list, 'r')

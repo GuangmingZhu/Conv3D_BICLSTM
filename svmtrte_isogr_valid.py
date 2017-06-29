@@ -290,7 +290,7 @@ print (format_str % (datetime.now(), average_accuracy))
 fusion_prediction = rgb_prediction + depth_prediction + flow_prediction
 prediction_values = tf.argmax(fusion_prediction, 1)
 final_accuracy = tf.reduce_mean(tf.cast(tf.equal(tf.cast(prediction_values, tf.int32), y_test), tf.float32))
-print final_accuracy
+print 'Multifusion Result: %.6f' % final_accuracy
 
 np.save("training_feats.npy", training_feats)
 np.save("training_label.npy", training_label)
@@ -301,9 +301,10 @@ np.save("testing_label.npy", testing_label)
 sess.close()
 
 clf = svm.SVC(decision_function_shape='ovr')
-clf.fit(training_feats, training_label)
+clf.fit(training_feats, training_label.ravel())
 predict = clf.decision_function(testing_feats).argmax(1)
-accuracy = (predict == testing_label).sum() / len(testing_label)
+accuracy = (predict == testing_label.ravel()).sum() / len(testing_label.ravel())
+print 'SVM prediction accuracy: %.6f' % accuracy
 
 video_list = './dataset_splits/valid_list.txt'
 f = open(video_list, 'r')
