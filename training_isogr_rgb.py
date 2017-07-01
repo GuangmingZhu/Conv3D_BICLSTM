@@ -15,7 +15,7 @@ import cStringIO
 
 seq_len = 32
 batch_size = 8
-n_epoch = 1000
+n_epoch = 10
 learning_rate = 0.01
 decay_steps = 20000
 decay_rate  = 0.1
