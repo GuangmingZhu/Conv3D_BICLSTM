@@ -27,7 +27,7 @@ The pretrained models used in training processes can be obtained on the link: ht
 ### Testing Stage
 1) Use testing_isogr_test.py to validate the networks. Please replace the paths in the codes with your paths first. <br/>
 2) Use svmtrte_isogr_test.py to train SVM and test SVM using testing dataset. Please replace the paths in the codes with your paths first. <br/>
-
+3) svmtrte_isogr_test.py reports the final test result. <br/>
 
 ## Contact
 For any question, please contact

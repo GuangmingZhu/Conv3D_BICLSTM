@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 import tensorlayer as tl
 import inputs as data
-import c3d_biclstm_fpooling as net 
+import c3d_biclstm as net 
 import time
 from datetime import datetime
 import threading
@@ -283,9 +283,9 @@ np.save("testing_label.npy", testing_label)
 # In the end, close TensorFlow session.
 sess.close()
 
-clf = svm.SVC(decision_function_shape='ovr')
+clf = svm.LinearSVC(C=0.0005)
 clf.fit(training_feats, training_label.ravel())
-predict = clf.decision_function(testing_feats).argmax(1)
+predict = clf.predict(testing_feats)
 
 video_list = './dataset_splits/test_list.txt'
 f = open(video_list, 'r')
