@@ -290,7 +290,7 @@ print (format_str % (datetime.now(), average_accuracy))
 fusion_prediction = rgb_prediction + depth_prediction + flow_prediction
 prediction_values = tf.argmax(fusion_prediction, 1)
 final_accuracy = tf.reduce_mean(tf.cast(tf.equal(tf.cast(prediction_values, tf.int32), y_test), tf.float32))
-print 'Multifusion Result: %.6f' % final_accuracy
+print 'Multifusion Result: %.6f' % final_accuracy.eval()
 
 np.save("training_feats.npy", training_feats)
 np.save("training_label.npy", training_label)
