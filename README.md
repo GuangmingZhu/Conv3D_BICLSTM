@@ -9,25 +9,22 @@
 #### The original Tensorlayer does not support the convolutional LSTM, so the tensorlayer/layers.py needs to be replaced with tensorlayer-layers.py. <br/> <br/>
    
 ## Get the pretrained models
-The pretrained models used in training processes can be obtained on the link: https://pan.baidu.com/s/1slc2DMd Password: sty6. <br/>
+The pretrained models used in training processes can be obtained in the link: https://pan.baidu.com/s/1slc2DMd Password: sty6. <br/>
 
 ## How to use the code
 ### Prepare the data
-1) Convert each video files into images
-2) Compute the optical flow and save each optical flow frame as one image which is named as "%06d.jpg"
-3) If images(RGB, Depth, OpticalFlow) have been prepared and the names are not like "%06d.jpg", you can change the inputs.py.
-4) Assign the 'model_prefix' as the path in which you want to store the models in 'training_isogr_*.py'/'testing_isogr_*.py'/'svmtrte_isogr_*.py'.
+1) Convert each video files into images using extract_frames.sh in the dataset_splits/video2image.tar.gz. Before running extract_frames.sh, you should change the ROOTDIR in extract_frames.sh, so that IsoGD_phase_1 and IsoGD_phase_2 do exist under $ROOTDIR.
+2) Replace the path "/ssd/dataset" in the files under "dataset_splits" with the path "$ROOTDIR"
+3) run check_files.py to make sure all necessary image files do exist
 
 ### Training Stage
-1) Use training_*.py to finetune the networks for different modalities. Please replace the paths in the codes with your paths first. <br/>
-2) Stop training after 10 epoches are completed.<br/>
+1) Use training_*.py to finetune the networks for different modalities. Please change os.environ['CUDA_VISIBLE_DEVICES'] according to your workstation. <br/>
+2) You can run the three training_*.py on three TITAN X GPUs simultaneously. <br/>
 ### Valid Stage
-1) Use testing_isogr_valid.py to validate the networks. Please replace the paths in the codes with your paths first. <br/>
-2) Use svmtrte_isogr_valid.py to train SVM and validate SVM using valid dataset. Please replace the paths in the codes with your paths first. <br/>
+1) Use svmtrte_isogr_valid.py to train SVM and validate SVM using valid dataset. <br/>
 ### Testing Stage
-1) Use testing_isogr_test.py to validate the networks. Please replace the paths in the codes with your paths first. <br/>
-2) Use svmtrte_isogr_test.py to train SVM and test SVM using testing dataset. Please replace the paths in the codes with your paths first. <br/>
-3) svmtrte_isogr_test.py reports the final test result. <br/>
+1) Use svmtrte_isogr_test.py to train SVM and test SVM using testing dataset. <br/>
+#### svmtrte_isogr_test.py reports the final test result. <br/>
 
 ## Contact
 For any question, please contact
