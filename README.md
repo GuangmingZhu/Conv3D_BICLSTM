@@ -19,12 +19,8 @@ The pretrained models used in training processes can be obtained in the link: ht
 
 ### Training Stage
 1) Use training_*.py to finetune the networks for different modalities. Please change os.environ['CUDA_VISIBLE_DEVICES'] according to your workstation. <br/>
-2) You can run the three training_*.py on three TITAN X GPUs simultaneously. <br/>
-### Valid Stage
-1) Use svmtrte_isogr_valid.py to train SVM and validate SVM using valid dataset. <br/>
-### Testing Stage
-1) Use svmtrte_isogr_test.py to train SVM and test SVM using testing dataset. <br/>
-#### svmtrte_isogr_test.py reports the final test result. <br/>
+### Validating and testing Stage
+1) Use testing_isogr_valid.py and testing_isogr_test.py to evaluate the trained models on the validating and testing sets of IsoGD
 
 ## Contact
 For any question, please contact
