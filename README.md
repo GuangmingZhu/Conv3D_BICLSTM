@@ -22,6 +22,25 @@ The pretrained models used in training processes and our trained models can be o
 ### Validating and testing Stage
 1) Use testing_isogr_valid.py and testing_isogr_test.py to evaluate the trained models on the validating and testing sets of IsoGD
 
+## Ciation
+Please cite the following paper if you feel this repository useful. <br/>
+```
+@article{ZhuICCV2017,
+  title={Learning Spatiotemporal Features using 3DCNN and Convolutional LSTM for Gesture Recognition},
+  author={Liang Zhang and Guangming Zhu and Peiyi Shen and Juan Song and Syed Afaq Shah and Mohammed Bennamoun},
+  journal={ICCV},
+  year={2017}
+}
+@article{Zhu2017MultimodalGR,
+  title={Multimodal Gesture Recognition Using 3-D Convolution and Convolutional LSTM},
+  author={Guangming Zhu and Liang Zhang and Peiyi Shen and Juan Song},
+  journal={IEEE Access},
+  year={2017},
+  volume={5},
+  pages={4517-4524}
+}
+```
+
 ## Contact
 For any question, please contact
 ```
