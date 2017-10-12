@@ -22,7 +22,7 @@ The pretrained models used in training processes and our trained models can be o
 ### Validating and testing Stage
 1) Use testing_isogr_valid.py and testing_isogr_test.py to evaluate the trained models on the validating and testing sets of IsoGD
 
-## Ciation
+## Citation
 Please cite the following paper if you feel this repository useful. <br/>
 ```
 @article{ZhuICCV2017,
