@@ -9,7 +9,7 @@
 #### The original Tensorlayer does not support the convolutional LSTM, so the tensorlayer/layers.py needs to be replaced with tensorlayer-layers.py. <br/> <br/>
    
 ## Get the pretrained models
-The pretrained models used in training processes can be obtained in the link: https://pan.baidu.com/s/1slc2DMd Password: sty6. <br/>
+The pretrained models used in training processes and our trained models can be obtained in the link: https://pan.baidu.com/s/1slc2DMd Password: sty6. <br/>
 
 ## How to use the code
 ### Prepare the data
