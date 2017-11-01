@@ -24,6 +24,8 @@ The pretrained models used in training processes and our trained models can be o
 
 ## Citation
 Please cite the following paper if you feel this repository useful. <br/>
+http://ieeexplore.ieee.org/abstract/document/7880648/
+http://openaccess.thecvf.com/content_ICCV_2017_workshops/w44/html/Zhang_Learning_Spatiotemporal_Features_ICCV_2017_paper.html
 ```
 @article{ZhuICCV2017,
   title={Learning Spatiotemporal Features using 3DCNN and Convolutional LSTM for Gesture Recognition},
