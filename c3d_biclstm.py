@@ -14,7 +14,7 @@ def c3d_biclstm(inputs, num_classes, reuse, is_training):
       if inputs.get_shape().ndims!=5:
         raise Exception("The input dimension of 3DCNN must be rank 5")
       network_input = tl.layers.InputLayer(inputs, name='input_layer')      #Input Layer
-      # 3DCNN-BN Layer 1
+      # 3DCNN Block 1
       conv3d_1 = tl.layers.Conv3dLayer(network_input,
                                         act=tf.identity,
                                         shape=[3,3,3,3,64],
@@ -31,7 +31,7 @@ def c3d_biclstm(inputs, num_classes, reuse, is_training):
                                         padding='SAME',
                                         pool = tf.nn.max_pool3d,
                                         name='Pool3D_1')
-      # 3DCNN-Incep Layer 2
+      # 3DCNN Block 2
       conv3d_2_3x3 = tl.layers.Conv3dLayer(pool3d_1, 
                                         act=tf.identity, 
                                         shape=[3,3,3,64,128], 
@@ -48,7 +48,7 @@ def c3d_biclstm(inputs, num_classes, reuse, is_training):
                                         padding='SAME',
                                         pool = tf.nn.max_pool3d,
                                         name='Pool3D_2')
-      # 3DCNN-Resnet Layer 1
+      # 3DCNN Block 3
       conv3d_3a_3x3 = tl.layers.Conv3dLayer(pool3d_2, 
                                         act=tf.identity, 
                                         shape=[3,3,3,128,256],
